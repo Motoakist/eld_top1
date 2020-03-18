@@ -5,19 +5,19 @@
     particlesJS("particles-js", {
         "particles": {
         "number": {
-            "value": 380,
+            "value": 600,
             "density": {
             "enable": true,
             "value_area": 800
             }
         },
         "color": {
-            "value": "#000000"
+            "value": "#ffffff"
         },
         "shape": {
-            "type": "circle",
+            "type": "edge",
             "stroke": {
-            "width": 0,
+            "width": 2,
             "color": "#000000"
             },
             "polygon": {
@@ -133,4 +133,12 @@
         requestAnimationFrame(update);
     };
     requestAnimationFrame(update);
+
+
+
+    $('.txt').html(function(i, html) {
+        var chars = $.trim(html).split("");
+      
+        return '<span>' + chars.join('</span><span>') + '</span>';
+      });
 }
